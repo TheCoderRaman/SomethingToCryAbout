@@ -1,0 +1,11 @@
+This is where I learned.
+
+Object Orientation is going to reduce my typing.
+Even if implementing it is still a complete pain in the a**
+
+I will halt it for now
+but if I ever want to finish it
+
+- IMPLEMENT PROPER WALL BASED COLLISION DETECTION
+- ADD BULLETS
+

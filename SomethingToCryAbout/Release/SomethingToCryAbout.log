@@ -1,0 +1,44 @@
+﻿Build started 4/25/2017 6:11:16 PM.
+     1>Project "C:\Users\Random\Desktop\SomethingToCryAbout\SomethingToCryAbout\SomethingToCryAbout.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Level.cpp
+         Level.cpp
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(100): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(101): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(53): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(54): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(71): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(72): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(77): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(82): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(87): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(92): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(24): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>Level.cpp(21): warning C4018: '<' : signed/unsigned mismatch
+     1>Level.cpp(23): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.exe" /INCREMENTAL:NO /NOLOGO SDL2.lib SDL2_image.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.lib" /MACHINE:X86 /SAFESEH Release\GenericActor.obj
+         Release\Level.obj
+         Release\main.obj
+         Release\Player.obj
+         Release\Sprite.obj
+         Release\stdafx.obj
+         Release\Texture.obj
+         Release\Wall.obj
+         Release\Window.obj
+         Generating code
+         Finished generating code
+         SomethingToCryAbout.vcxproj -> C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.exe
+     1>Done Building Project "C:\Users\Random\Desktop\SomethingToCryAbout\SomethingToCryAbout\SomethingToCryAbout.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.98
