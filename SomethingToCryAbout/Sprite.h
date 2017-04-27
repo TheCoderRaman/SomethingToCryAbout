@@ -16,9 +16,11 @@ public:
 	virtual void Draw(int x, int y, SDL_Renderer **render); // Using coordinates
 	void DrawNoCoords(SDL_Renderer **render); // ALT OPTION
 	void LoadTexture(char* location, SDL_Renderer &render);
+	bool TextureIsLoaded() { return loaded; }
 	SDL_Rect rect;
 protected:
 	Texture texture;
-	int _x, _y, _w, _h;
+	bool loaded = false;
+	float _x, _y, _w, _h;
 };
 

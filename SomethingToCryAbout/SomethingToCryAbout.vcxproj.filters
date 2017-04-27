@@ -45,17 +45,23 @@
     <ClInclude Include="Sprite.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Wall.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Bullet.h">
+      <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="GenericActor.h">
-      <Filter>Header Files</Filter>
+      <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="Level.h">
-      <Filter>Header Files</Filter>
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,26 +71,32 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Base</Filter>
-    </ClCompile>
     <ClCompile Include="Window.cpp">
       <Filter>Base</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="Wall.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Base</Filter>
     </ClCompile>
     <ClCompile Include="GenericActor.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Base</Filter>
     </ClCompile>
     <ClCompile Include="Level.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

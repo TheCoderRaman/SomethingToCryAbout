@@ -8,8 +8,8 @@ Texture::Texture()
 
 Texture::~Texture()
 {
-//	if ( m_texture != 0 )
-//	SDL_DestroyTexture(m_texture);
+	if ( m_texture != 0 )
+	SDL_DestroyTexture(m_texture);
 }
 
 SDL_Texture *Texture::getTexture()

@@ -17,3 +17,5 @@
 #define _SDL_TTF
 #endif
 #endif
+#define BLOCK_SIZE 55
+#define ACTOR_SIZE 50

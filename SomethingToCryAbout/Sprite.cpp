@@ -24,6 +24,7 @@ Calls LoadFromFile of it's internal Texture class
 void Sprite::LoadTexture(char* location, SDL_Renderer &render)
 {
 	texture.LoadFromFile(location, &render);
+	loaded = true;
 }
 
 // Destructor

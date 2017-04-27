@@ -1,7 +1,6 @@
 #include "Level.h"
 
-const int BLOCK_SIZE = 55; // no bigger than the player
-const int ACTOR_SIZE = 50;
+#include "common.h"
 Level::Level(std::string path)
 {
 	std::ifstream level(path);
@@ -16,7 +15,7 @@ Level::Level(std::string path)
 	level.close();
 }
 
-void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<GenericActor>&actors, std::vector<Sprite> &sprites)
+void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<GenericActor>&actors, std::vector<Sprite> &sprites, std::vector<Enemy> &enemies)
 {
 	for (int i = 0; i < levelData.size(); i++)
 	{
@@ -31,7 +30,7 @@ void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<G
 			if (levelData[i][j] == '#')
 			{
 				std::printf("Wall found!\n");
-				walls.push_back(Wall(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE));
+				walls.push_back(Wall(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, false));
 			}
 			if (levelData[i][j] == '@')
 			{
@@ -42,6 +41,13 @@ void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<G
 			if (levelData[i][j] == '.')
 			{
 				std::printf("floor\n");
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE));
+			}
+			if (levelData[i][j] == 'E')
+			{
+				// Enemy
+				std::printf("Enemy\n");
+				enemies.push_back(Enemy(j*ACTOR_SIZE, i*ACTOR_SIZE, ACTOR_SIZE, ACTOR_SIZE, 4 * i*j-j));
 				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE));
 			}
 		}

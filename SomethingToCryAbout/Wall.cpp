@@ -1,6 +1,6 @@
 #include "Wall.h"
 
-Wall::Wall(int x, int y, int w, int h) :
+Wall::Wall(int x, int y, int w, int h, bool breakable) :
 _x{ x }, _y{ y }, _w{ w }, _h{ h }
 {
 }
