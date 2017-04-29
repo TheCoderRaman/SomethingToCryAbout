@@ -23,7 +23,7 @@ public:
 		
 	}
 	~Player();
-	void Draw(SDL_Renderer **render);
+	void Draw(SDL_Renderer **render, float x, float y);
 	void Collision(const Player &other)
 	{
 		// Reimplement later
@@ -67,7 +67,7 @@ public:
 		_y = y;
 	}
 	template <class T>
-	void CWallCollision(const T &other)
+	void CWallCollision(const T &other, float x, float y)
 	{
 		{
 			bool collideX = (other.rect.x  < rect.x + rect.w && other.rect.x + other.rect.w > rect.x);
@@ -82,28 +82,32 @@ public:
 			int b_collision = oBottom - rect.y;
 			int l_collision = pRight - other.rect.x;
 			int r_collision = oRight - rect.x;
-			int prevX = _x;
-			int prevY = _y;
+			float prevX = _x;
+			float prevY = _y;
 			if (CheckIfTouching<T>(other)){
-				if (t_collision < b_collision && t_collision < l_collision && t_collision < r_collision)
+				if (t_collision <= b_collision && t_collision <= l_collision && t_collision <= r_collision)
 				{
 					//Top collision
-					_y = prevY;
+					std::printf("Top Collision\n");
+					_y -= _vY*2;
 				}
-				if (b_collision < t_collision && b_collision < l_collision && b_collision < r_collision)
+				if (b_collision <= t_collision && b_collision <= l_collision && b_collision <= r_collision)
 				{
 					//bottom collision
-					_y = other.rect.y + other.rect.h;
+					std::printf("Bottom Collision\n");
+					_y += _vY * 2;
 				}
-				if (l_collision < r_collision && l_collision < t_collision && l_collision < b_collision)
+				if (l_collision <= r_collision && l_collision <= t_collision && l_collision <= b_collision)
 				{
 					//Left collision
-					_x = prevX;
+					std::printf("Left Collision\n");
+					_x -= _vX * 2;
 				}
-				if (r_collision < l_collision && r_collision < t_collision && r_collision < b_collision)
+				if (r_collision <= l_collision && r_collision <= t_collision && r_collision <= b_collision)
 				{
 					//Right collision
-					_x = other.rect.x + other.rect.w;
+					std::printf("Right Collision\n");
+					_x += _vX*2 ;
 				}
 			}
 		}
@@ -115,7 +119,6 @@ public:
 	float _vY = 1.6 / 10;
 	int _w, _h;
 	float _health = 100;
-	int _angle;
 	private:
 		int fxCoolDown = 40;
 };

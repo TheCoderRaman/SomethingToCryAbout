@@ -6,7 +6,16 @@ The Constructor
 Provide X and Y ( which may change )
 The Width and Height however are as they are.
 */
-Sprite::Sprite(int x, int y, int w, int h)
+
+void Sprite::FlatDraw(SDL_Renderer** render, float x, float y)
+{
+	_x = x;
+	_y = y;
+	rect.x = _x;
+	rect.y = _y;
+	SDL_RenderCopy(*render, texture.getTexture(), NULL, &rect);
+}
+Sprite::Sprite(int x, int y, int w, int h, int type)
 {
 	_x = x;
 	_y = y;
@@ -16,6 +25,7 @@ Sprite::Sprite(int x, int y, int w, int h)
 	rect.y = _y;
 	rect.h = _h;
 	rect.w = _w;
+	TYPE = type;
 }
 /*
 Wrapper Function
@@ -36,10 +46,10 @@ Sprite::~Sprite()
 Simple Draw To The Screen.
 Like any other draw function I suppose.
 */
-void Sprite::Draw(int x, int y, SDL_Renderer **render)
+void Sprite::Draw(float x, float y, SDL_Renderer **render)
 {
-	rect.x = x;
-	rect.y = y;
+	rect.x = _x - x;
+	rect.y = _y - y;
 	SDL_RenderCopy(*render, texture.getTexture(), NULL, &rect);
 }
 

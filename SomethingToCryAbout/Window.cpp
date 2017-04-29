@@ -6,7 +6,7 @@
 // Height = window height
 // Name = Window Name
 //
-Window::Window(SDL_WindowFlags flags, int width, int height, char* name)
+Window::Window(Uint32 flags, int width, int height, char* name)
 {
 	m_flags = flags;
 	m_width = width;

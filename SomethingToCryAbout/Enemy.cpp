@@ -31,7 +31,7 @@ void Enemy::AI_Loop(Player &player)
 	if (isAggroed() == true)
 	{
 		// Fight code
-		std::printf("This Enemy has been aggroed\n");
+//		std::printf("This Enemy has been aggroed\n");
 		if (distX <= 2.0f * BLOCK_SIZE && distY <= 3.0f * BLOCK_SIZE)
 		{
 			if (_x != player.GetX() + player.GetWidth())
@@ -57,7 +57,7 @@ void Enemy::AI_Loop(Player &player)
 		}
 		else
 		{
-			std::printf("It's firing at you.\n");
+	//		std::printf("It's firing at you.\n");
 			s = 1;
 		}
 		_angle = -player.GetAngle();
@@ -65,7 +65,7 @@ void Enemy::AI_Loop(Player &player)
 	else
 	{
 		// Generic State
-		std::printf("This Enemy is not angry.\n");
+	//	std::printf("This Enemy is not angry.\n");
 		srand(time(0) * id - 250 + id);
 		int moveX = rand() % 2 + 1;
 		int moveY = rand() % 2 + 1;
@@ -93,10 +93,10 @@ void Enemy::AI_Loop(Player &player)
 	lfTimeFX--;
 }
 
-void Enemy::Draw(SDL_Renderer ** render)
+void Enemy::Draw(SDL_Renderer ** render, float x, float y)
 {
-	rect.x = _x;
-	rect.y = _y;
+	rect.x = _x - x ;
+	rect.y = _y - y;
 	rect.w = _w;
 	rect.h = _h;
 	SDL_RenderCopyEx(*render, texture.getTexture(), NULL, &rect, _angle, NULL, SDL_FLIP_NONE);

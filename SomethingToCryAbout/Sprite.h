@@ -11,15 +11,20 @@ class Sprite
 {
 public:
 	Sprite(){}
-	Sprite(int x, int y, int w, int h);
+	Sprite(int x, int y, int w, int h, int type);
 	~Sprite();
-	virtual void Draw(int x, int y, SDL_Renderer **render); // Using coordinates
+	// CHANGED TO WORK WITH A CAMERA
+	virtual void Draw(float x, float y, SDL_Renderer **render); // Using coordinates
 	void DrawNoCoords(SDL_Renderer **render); // ALT OPTION
 	void LoadTexture(char* location, SDL_Renderer &render);
+	void FlatDraw(SDL_Renderer** render, float x, float y); // Also known as UI Drawing as it ignores the Camera completely :D
 	bool TextureIsLoaded() { return loaded; }
 	SDL_Rect rect;
+	float _angle;
+	int TYPE;
 protected:
 	Texture texture;
+	
 	bool loaded = false;
 	float _x, _y, _w, _h;
 };

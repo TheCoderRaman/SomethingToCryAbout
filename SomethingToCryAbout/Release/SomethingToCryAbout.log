@@ -1,121 +1,16 @@
-﻿Build started 4/27/2017 6:45:41 PM.
+﻿Build started 4/28/2017 11:07:43 PM.
      1>Project "C:\Users\Random\Desktop\SomethingToCryAbout\SomethingToCryAbout\SomethingToCryAbout.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bullet.cpp Enemy.cpp GenericActor.cpp Level.cpp Player.cpp main.cpp
-         Bullet.cpp
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(47): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Bullet.cpp(8): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>Bullet.cpp(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>Bullet.cpp(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>Bullet.cpp(11): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Bullet.cpp(12): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Bullet.cpp(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Bullet.cpp(32): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-         Enemy.cpp
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(47): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Enemy.cpp(63): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Enemy.cpp(69): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>Enemy.cpp(98): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Enemy.cpp(99): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-         GenericActor.cpp
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(47): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>GenericActor.cpp(15): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Level.cpp
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(47): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(20): warning C4018: '<' : signed/unsigned mismatch
-     1>Level.cpp(22): warning C4018: '<' : signed/unsigned mismatch
-         Player.cpp
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(47): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>Player.cpp(5): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>Player.cpp(6): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(47): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
@@ -126,42 +21,56 @@
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(57): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(106): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(111): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(113): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(115): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(126): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(130): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(134): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(138): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(141): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(145): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(150): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(158): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(163): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(171): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(179): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(189): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(198): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(205): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(85): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-                 c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(137) : see reference to function template instantiation 'void Player::CWallCollision<Wall>(const T &)' being compiled
-                 with
-                 [
-                     T=Wall
-                 ]
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(86): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(91): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(96): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(101): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Player.h(106): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(68): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(122): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(127): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(129): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(135): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(139): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(154): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(155): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(172): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(176): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(183): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(184): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(185): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(186): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(187): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(188): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(190): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(192): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(194): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(196): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(199): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(205): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(207): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(212): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(220): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(226): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(228): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(238): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(240): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(241): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(242): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(243): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(244): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(245): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(247): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(254): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(256): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(258): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(263): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(265): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(266): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\desktop\somethingtocryabout\somethingtocryabout\Game.h(273): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.exe" /INCREMENTAL:NO /NOLOGO SDL2.lib SDL2_image.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Random\Desktop\SomethingToCryAbout\Release\SomethingToCryAbout.lib" /MACHINE:X86 /SAFESEH Release\Bullet.obj
          Release\Enemy.obj
          Release\GenericActor.obj
          Release\Level.obj
          Release\main.obj
+         Release\MovableWall.obj
          Release\Player.obj
          Release\Sprite.obj
          Release\stdafx.obj
@@ -175,4 +84,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.49
+Time Elapsed 00:00:01.25

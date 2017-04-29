@@ -10,10 +10,10 @@ Wall::~Wall()
 {
 }
 
-void Wall::Draw(SDL_Renderer **render)
+void Wall::Draw(SDL_Renderer **render, float x, float y)
 {
-	rect.x = _x;
-	rect.y = _y;
+	rect.x = _x - x;
+	rect.y = _y - y;
 	rect.w = _w;
 	rect.h = _h;
 	SDL_RenderCopy(*render, texture.getTexture(), NULL, &rect);

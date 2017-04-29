@@ -21,8 +21,8 @@ public:
 		rect.h = _h;
 	}
 	~Enemy();
-	void Draw(SDL_Renderer **render);
-	void AI_Loop(Player &player);
+	void Draw(SDL_Renderer **render, float x, float y);
+	virtual void AI_Loop(Player &player);
 	bool isAggroed()  { return aggro; }
 	int getSignal() { return s; }
 	bool isDead(){ if (health <= 0) return true; else return false; };
@@ -41,6 +41,6 @@ private:
 	bool aggro;
 	bool dead;
 	int s;
-	int firingCoolDown = 2000;
+    int firingCoolDown = 2000;
 };
 

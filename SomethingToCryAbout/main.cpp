@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
 {
 	bool fl = true;
 	Init();
-	Window window(SDL_WINDOW_SHOWN, 1440, 900, "Something to Cry About");
+	Window window(SDL_WINDOW_SHOWN, 800, 600, "Something to Cry About");
 	window.CreateWindow();
 	RunGame(fl, &window);
 	return 0;

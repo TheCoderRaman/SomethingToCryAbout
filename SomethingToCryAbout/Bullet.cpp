@@ -26,9 +26,9 @@ Bullet::~Bullet()
 	texture.FreeResources();
 }
 
-void Bullet::Draw(SDL_Renderer** render)
+void Bullet::Draw(SDL_Renderer** render, float x, float y)
 {
-	rect.x = _x;
-	rect.y = _y;
+	rect.x = _x-x;
+	rect.y = _y-y;
 	SDL_RenderCopyEx(*render, texture.getTexture(), NULL, &rect, _angle, NULL, SDL_FLIP_NONE);
 }

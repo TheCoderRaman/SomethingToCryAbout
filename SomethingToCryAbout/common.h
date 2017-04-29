@@ -17,5 +17,12 @@
 #define _SDL_TTF
 #endif
 #endif
+// Floor Types
+#define TYPE_WOOD 0
+#define TYPE_GRASS 1
+// OTHER SPRITE TYPES
+#define TYPE_UI_BANNER 40
+#define TYPE_UI_MENU 2000
+// Sizes
 #define BLOCK_SIZE 55
 #define ACTOR_SIZE 50

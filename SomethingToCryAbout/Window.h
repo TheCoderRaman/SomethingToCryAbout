@@ -4,7 +4,7 @@
 class Window
 {
 public:
-	Window(SDL_WindowFlags flags, int width, int height, char* name);
+	Window(Uint32 flags, int width, int height, char* name);
 	~Window();
 	SDL_Window *getWindow(); // for rendering purposes
 	bool CreateWindow();
@@ -13,7 +13,7 @@ private:
 	SDL_Window* m_window = NULL;
 	int m_width;
 	int m_height;
-	SDL_WindowFlags m_flags;
+	Uint32 m_flags;
 	char* m_name;
 
 };

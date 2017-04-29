@@ -63,6 +63,9 @@
     <ClInclude Include="Enemy.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="MovableWall.h">
+      <Filter>Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -96,6 +99,9 @@
       <Filter>Base</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="MovableWall.cpp">
       <Filter>Base</Filter>
     </ClCompile>
   </ItemGroup>

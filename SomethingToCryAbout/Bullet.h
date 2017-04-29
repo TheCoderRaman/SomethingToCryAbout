@@ -9,7 +9,7 @@ public:
 	// Speed (vX) is divided by 300
 	Bullet(int angle, float vX, float vY, int x, int y, int lifeTime, SDL_Renderer* rend);
 	~Bullet();
-	void Draw(SDL_Renderer **render);
+	void Draw(SDL_Renderer **render, float x, float y);
 	//Based on ticks.
 	// my first official use of templates. Finally I think outside of the box
 	template <class T>
