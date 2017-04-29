@@ -66,6 +66,9 @@
     <ClInclude Include="MovableWall.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="CameraStruct.h">
+      <Filter>Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

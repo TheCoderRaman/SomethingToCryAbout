@@ -10,6 +10,7 @@
 #include "Enemy.h"
 #include "Bullet.h"
 #include "MovableWall.h"
+#include "CameraStruct.h"
 // Global Variables
 // Like Buttons etc.
 /*
@@ -21,10 +22,6 @@ const int w = 800;
 const int h = 600;
 const int lW = 15000;
 const int lH = 15000;
-struct Camera
-{
-	SDL_Rect camRect;
-}camera;
 
 SDL_Event e; // For General Events
 SDL_Renderer* render; // GLOBAL RENDERER
@@ -117,7 +114,6 @@ void RunGame(bool &running, Window* window)
 	
 	// UI ELEMENTS
 	Sprite banner(w / 2, h - 300, 200, 100, TYPE_UI_BANNER);
-	banner.LoadTexture("Assests\\banner.png", *render);
 	// END OF UI
 	for (int i = 0; i < walls.size(); i++)
 	{
@@ -268,7 +264,6 @@ void RunGame(bool &running, Window* window)
 	
 	//	player.DrawAtOffset(camera.camRect.x, camera.camRect.y, &render);
 		player.Draw(&render, camera.camRect.x, camera.camRect.y);
-		banner.FlatDraw(&render, w / 2  + 200 ,  h-600 );
 		std::printf("\nCamera X %d \nCamera Y %d",camera.camRect.x, camera.camRect.y);
 		std::printf("\nPlayer X %d\nPlayer Y %d", player._x, player._y);
 		SDL_RenderPresent(render);
