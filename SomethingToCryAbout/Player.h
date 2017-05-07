@@ -89,25 +89,25 @@ public:
 				{
 					//Top collision
 					std::printf("Top Collision\n");
-					_y -= _vY*2;
+					_y -= _vY*3;
 				}
 				if (b_collision <= t_collision && b_collision <= l_collision && b_collision <= r_collision)
 				{
 					//bottom collision
 					std::printf("Bottom Collision\n");
-					_y += _vY * 2;
+					_y += _vY * 3;
 				}
 				if (l_collision <= r_collision && l_collision <= t_collision && l_collision <= b_collision)
 				{
 					//Left collision
 					std::printf("Left Collision\n");
-					_x -= _vX * 2;
+					_x -= _vX * 3;
 				}
 				if (r_collision <= l_collision && r_collision <= t_collision && r_collision <= b_collision)
 				{
 					//Right collision
 					std::printf("Right Collision\n");
-					_x += _vX*2 ;
+					_x += _vX*3 ;
 				}
 			}
 		}

@@ -10,7 +10,7 @@ Enemy::~Enemy()
 	texture.FreeResources();
 }
 
-void Enemy::AI_Loop(Player &player)
+void Enemy::AI_Loop(Player &player, uint32_t deltaTime)
 {
 	s = 0;
 	float distX = abs(player.GetX() - _x);
@@ -32,26 +32,26 @@ void Enemy::AI_Loop(Player &player)
 	{
 		// Fight code
 //		std::printf("This Enemy has been aggroed\n");
-		if (distX <= 2.0f * BLOCK_SIZE && distY <= 3.0f * BLOCK_SIZE)
+		if (distX <= 4.0f * BLOCK_SIZE && distY <= 4.0f * BLOCK_SIZE)
 		{
 			if (_x != player.GetX() + player.GetWidth())
 			{
 				if (player.GetAngle() == 90)
 				{
-					_x -= _vX;
+					_x -= _vX*deltaTime;
 				}
 				if (player.GetAngle() == -90)
 				{
-					_x += _vX;
+					_x += _vX*deltaTime;
 				}
 			}
 			if (_y != player.GetY() + player.GetHeight())
 			{
 				if (player.GetAngle() == 0){
-					_y -= _vY;
+					_y -= _vY*deltaTime;
 				}
 				if (player.GetAngle() == 180){
-					_y += _vY;
+					_y += _vY*deltaTime;
 				}
 			}
 		}
@@ -70,22 +70,22 @@ void Enemy::AI_Loop(Player &player)
 		int moveX = rand() % 2 + 1;
 		int moveY = rand() % 2 + 1;
 		if (moveX == 1){
-			_x -= 16.0f / 250;
+			_x -= _vX/3*deltaTime/2;
 			_angle = -90;
 		}
 		if (moveX == 2)
 		{
-			_x += 16.0f / 250;
+			_x += _vX/3*deltaTime/2;
 			_angle = 90;
 		}
 		if (moveY == 1)
 		{
-			_y += 16.0f / 250;
+			_y += _vY/3*deltaTime/2;
 			_angle = 180;
 		}
 		if (moveY == 2)
 		{
-			_y -= 16.0f / 250;
+			_y -= _vY/3*deltaTime/2;
 			_angle = 0;
 		}
 	}

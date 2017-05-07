@@ -20,7 +20,7 @@ public:
 
 	}
 	~GenericActor();
-	virtual void AI_Loop();
+	virtual void AI_Loop(uint32_t deltaTime);
 	int id;
 private:
 };

@@ -6,7 +6,15 @@ The Constructor
 Provide X and Y ( which may change )
 The Width and Height however are as they are.
 */
-
+/*
+====================
+Return Type : void
+FlatDraw(Renderer, 2dVector Coords)
+--------------------------
+Description
+=======================
+This function draws the sprite without being displaced by Camera Coordinates
+*/
 void Sprite::FlatDraw(SDL_Renderer** render, float x, float y)
 {
 	_x = x;
@@ -26,6 +34,18 @@ Sprite::Sprite(int x, int y, int w, int h, int type)
 	rect.h = _h;
 	rect.w = _w;
 	TYPE = type;
+}
+
+Sprite::Sprite(int x, int y, int w, int h)
+{
+	_x = x;
+	_y = y;
+	_w = w;
+	_h = h;
+	rect.x = _x;
+	rect.y = _y;
+	rect.h = _h;
+	rect.w = _w;
 }
 /*
 Wrapper Function

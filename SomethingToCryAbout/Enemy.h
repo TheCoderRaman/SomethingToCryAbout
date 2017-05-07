@@ -22,7 +22,7 @@ public:
 	}
 	~Enemy();
 	void Draw(SDL_Renderer **render, float x, float y);
-	virtual void AI_Loop(Player &player);
+	virtual void AI_Loop(Player &player, uint32_t deltaTime);
 	bool isAggroed()  { return aggro; }
 	int getSignal() { return s; }
 	bool isDead(){ if (health <= 0) return true; else return false; };
@@ -41,6 +41,6 @@ private:
 	bool aggro;
 	bool dead;
 	int s;
-    int firingCoolDown = 2000;
+    int firingCoolDown = 350;
 };
 

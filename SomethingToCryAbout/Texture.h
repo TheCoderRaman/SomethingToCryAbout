@@ -17,6 +17,11 @@ public:
 		SDL_Point * cetner = NULL;
 		SDL_RenderCopyEx(render, m_texture, NULL, &self, angle, cetner, SDL_FLIP_NONE);
 	}
+	void RenderToWholeScreen(SDL_Renderer* render)
+	{
+		SDL_Rect self{ 0, 0, 800, 600 };
+		SDL_RenderCopy(render, m_texture, NULL, &self);
+	}
 	void FreeResources()
 	{
 		SDL_DestroyTexture(m_texture);

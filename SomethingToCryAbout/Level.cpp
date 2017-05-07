@@ -49,6 +49,10 @@ void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<G
 			{
 				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_GRASS));
 			}
+			if (levelData[i][j] == ':')
+			{
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_METAL));
+			}
 			if (levelData[i][j] == '.')
 			{
 				std::printf("floor\n");

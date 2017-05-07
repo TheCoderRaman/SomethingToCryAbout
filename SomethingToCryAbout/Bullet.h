@@ -29,16 +29,16 @@ public:
 	{
 		destroy = c;
 	}
-	void action()
+	void action(uint32_t deltaTime)
 	{
 		if (_angle == 90)
-		_x += _vX/60;
+		_x += (_vX/20)*deltaTime;
 		if (_angle == -90)
-		_x -= _vX/60;
+		_x -= (_vX/20)*deltaTime;
 		if (_angle == 180)
-		_y += _vX/60;
+		_y += (_vX/20)*deltaTime;
 		if (_angle == 0)
-		_y -= _vX/60;
+		_y -= (_vX/20)*deltaTime;
 
 		_lifeTime--;
 	}

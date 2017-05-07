@@ -20,9 +20,25 @@
 // Floor Types
 #define TYPE_WOOD 0
 #define TYPE_GRASS 1
+#define TYPE_METAL 2
 // OTHER SPRITE TYPES
 #define TYPE_UI_BANNER 40
 #define TYPE_UI_MENU 2000
 // Sizes
 #define BLOCK_SIZE 55
 #define ACTOR_SIZE 50
+
+// Directions
+#define DIR_UP 0
+#define DIR_DOWN 180
+#define DIR_LEFT -90
+#define DIR_RIGHT 90
+
+/*
+	Button Defs
+
+	I should probably use Enums for typesafe reasons
+	5/7/17 likely to be last update
+*/
+#define BUTTON_START 101
+#define BUTTON_QUIT 0

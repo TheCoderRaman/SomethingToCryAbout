@@ -9,9 +9,9 @@
 int main(int argc, char* argv[])
 {
 	bool fl = true;
-	Init();
-	Window window(SDL_WINDOW_SHOWN, 800, 600, "Something to Cry About");
+	GameBase::Init();
+	Window window(SDL_WINDOW_SHOWN, 800, 600, "Revision 2 : The Refactoring");
 	window.CreateWindow();
-	RunGame(fl, &window);
+	GameBase::RunGame(fl, &window);
 	return 0;
 }

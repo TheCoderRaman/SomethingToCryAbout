@@ -10,7 +10,7 @@ GenericActor::~GenericActor()
 	texture.FreeResources();
 }
 
-void GenericActor::AI_Loop()
+void GenericActor::AI_Loop(uint32_t deltaTime)
 {
 		srand(time(0) * id - 250 + id);
 		int moveX = rand() % 2 + 1;
