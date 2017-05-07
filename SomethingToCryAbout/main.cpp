@@ -4,13 +4,16 @@
 //
 
 #include "stdafx.h"
+#include "ConfigReader.h"
 #include "Window.h"
 #include "Game.h"
 int main(int argc, char* argv[])
 {
 	bool fl = true;
+	int w, h, flag;
 	GameBase::Init();
-	Window window(SDL_WINDOW_SHOWN, 800, 600, "Revision 2 : The Refactoring");
+	FileSystem::ParseFile("ini\\settings.ini", w, h, flag);
+	Window window(SDL_WINDOW_SHOWN | flag, w, h, "Revision 2 : The Refactoring");
 	window.CreateWindow();
 	GameBase::RunGame(fl, &window);
 	return 0;

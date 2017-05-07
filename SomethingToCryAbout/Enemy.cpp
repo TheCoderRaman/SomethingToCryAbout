@@ -103,5 +103,5 @@ void Enemy::Draw(SDL_Renderer ** render, float x, float y)
 	if (lfTimeFX == 0)
 		SDL_SetTextureColorMod(texture.getTexture(), 255, 255, 255);
 	if (firingCoolDown == 0)
-		firingCoolDown = 2000;
+		firingCoolDown = firingCoolDownMax;
 }

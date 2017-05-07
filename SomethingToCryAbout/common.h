@@ -33,7 +33,10 @@
 #define DIR_DOWN 180
 #define DIR_LEFT -90
 #define DIR_RIGHT 90
-
+#define DIR_UP_KEY 1
+#define DIR_DOWN_KEY 2
+#define DIR_LEFT_KEY 3
+#define DIR_RIGHT_KEY 4
 /*
 	Button Defs
 

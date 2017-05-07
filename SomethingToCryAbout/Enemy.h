@@ -7,6 +7,7 @@ class Enemy : public GenericActor
 {
 public:
 	Enemy();
+//
 	Enemy(int x, int y, int w, int h, int ida)
 	{
 		_x = x;
@@ -35,12 +36,13 @@ public:
 		_x -= _vX;
 		_y -= _vY;
 	}
-private:
+protected:
 	int lfTimeFX = 30; // Red Effect LifeTime
 	int health = 400;
 	bool aggro;
 	bool dead;
 	int s;
     int firingCoolDown = 350;
+	int firingCoolDownMax = 350;
 };
 

@@ -15,7 +15,7 @@ Level::Level(std::string path)
 	level.close();
 }
 
-void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<GenericActor>&actors, std::vector<Sprite> &sprites, std::vector<Enemy> &enemies, std::vector<MovableWall> &mWalls, int spawnOffsetX, int spawnOffsetY)
+void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<GenericActor>&actors, std::vector<Sprite> &sprites, std::vector<Enemy> &enemies, std::vector<MovableWall> &mWalls, std::vector<Sentry_AI> &sentries, int spawnOffsetX, int spawnOffsetY)
 {
 	for (int i = 0; i < levelData.size(); i++)
 	{
@@ -26,6 +26,27 @@ void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<G
 				std::printf("Player Found!\n");
 				player.SetPosition(j + 1 * ACTOR_SIZE, i + 1 * ACTOR_SIZE);
 				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_WOOD));
+			}
+			
+			if (levelData[i][j] == '1')
+			{
+				sentries.push_back(Sentry_AI(j*ACTOR_SIZE, i*ACTOR_SIZE, ACTOR_SIZE, ACTOR_SIZE, DIR_UP));
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_METAL));
+			}
+			if (levelData[i][j] == '2')
+			{
+				sentries.push_back(Sentry_AI(j*ACTOR_SIZE, i*ACTOR_SIZE, ACTOR_SIZE, ACTOR_SIZE, DIR_DOWN));
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_METAL));
+			}
+			if (levelData[i][j] == '3')
+			{
+				sentries.push_back(Sentry_AI(j*ACTOR_SIZE, i*ACTOR_SIZE, ACTOR_SIZE, ACTOR_SIZE, DIR_LEFT));
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_METAL));
+			}
+			if (levelData[i][j] == '4')
+			{
+				sentries.push_back(Sentry_AI(j*ACTOR_SIZE, i*ACTOR_SIZE, ACTOR_SIZE, ACTOR_SIZE, DIR_RIGHT));
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_METAL));
 			}
 			if (levelData[i][j] == 'E')
 			{

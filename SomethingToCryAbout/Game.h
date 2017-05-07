@@ -12,6 +12,7 @@
 #include "Bullet.h"
 #include "MovableWall.h"
 #include "CameraStruct.h"
+#include "Sentry_AI.h"
 #include <SDL_mixer.h>
 // Global Variables
 // Like Buttons etc.
@@ -42,6 +43,7 @@ namespace GameBase{
 			std::vector<Wall> walls;
 			std::vector<MovableWall> mWalls;
 			std::vector<Enemy> enemies;
+			std::vector<Sentry_AI> sentries;
 			std::vector<Sprite> sprites;
 		};
 		bool Pressed = false; // Key Pressed
@@ -191,6 +193,8 @@ namespace GameBase{
 			}
 			for (int i = 0; i < enemies.size(); i++)
 				enemies[i].LoadTexture("Assests\\enemy.png", *render);
+			for (int i = 0; i < sentries.size(); i++)
+				sentries[i].LoadTexture("Assests\\turret.png", *render);
 			player.LoadTexture("Assests\\player.png", *render);
 			std::printf("Walls : %d", walls.size());
 		};
@@ -221,7 +225,7 @@ namespace GameBase{
 			else if (!GameBools::MenuActive) {
 				if (LevelLoaded == false)
 				{
-					test.ProcessLevel(player, walls, actors, sprites, enemies, mWalls, camera.camRect.x, camera.camRect.y);
+					test.ProcessLevel(player, walls, actors, sprites, enemies, mWalls, sentries,camera.camRect.x, camera.camRect.y);
 					LevelLoaded = true;
 					FObj_Setup();
 					HUD_Setup();
@@ -357,7 +361,23 @@ namespace GameBase{
 					enemies[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y);
 					player.CWallCollision<Enemy>(enemies[i], camera.camRect.x, camera.camRect.y);
 				}
-
+				for (int i = 0; i < sentries.size(); i++)
+				{
+					if (sentries[i].isDead() == true)
+					{
+						enemy_bullets.clear(); // To avoid weird magic bullets
+						enemies.erase(enemies.begin() + i);
+					}
+					sentries[i].Draw(&render, camera.camRect.x, camera.camRect.y);
+					sentries[i].AI_Loop(player, Clock::delta);
+					if (sentries[i].getSignal() == 1)
+					{
+						if (sentries[i].GetCoolDown() > 150)
+							enemy_bullets.push_back(Bullet(sentries[i]._angle, 45, 0, sentries[i]._x + sentries[i].rect.w / 2, sentries[i]._y + sentries[i].rect.h / 2, 750, render));
+					}
+					sentries[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y);
+					player.CWallCollision<Sentry_AI>(sentries[i], camera.camRect.x, camera.camRect.y);
+				}
 				//	player.DrawAtOffset(camera.camRect.x, camera.camRect.y, &render);
 				player.Draw(&render, camera.camRect.x, camera.camRect.y);
 				health_bar.Draw((int)0, (int)450, &render);
