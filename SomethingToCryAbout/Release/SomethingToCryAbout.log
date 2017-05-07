@@ -1,4 +1,4 @@
-﻿Build started 5/7/2017 3:25:21 PM.
+﻿Build started 5/7/2017 4:24:46 PM.
      1>Project "C:\Users\Random\Dropbox\C++\SomethingToCryAbout\SomethingToCryAbout\SomethingToCryAbout.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -29,58 +29,78 @@
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(114): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(175): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(180): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(182): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(13): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(14): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(15): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(22): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(23): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(24): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(25): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(32): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(33): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(118): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(183): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(188): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(190): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(194): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(196): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(235): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(236): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(253): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(257): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(261): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(264): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(265): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(198): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(202): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(204): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(244): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(245): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(262): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(266): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(267): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(268): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(269): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(271): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(270): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(273): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(274): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(275): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(277): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(276): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(277): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(278): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(280): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(282): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(284): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(286): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(288): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(292): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(299): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(307): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(314): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(317): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(326): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(334): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(336): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(337): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(338): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(339): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(340): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(341): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(343): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(350): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(352): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(289): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(295): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(297): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(301): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(315): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(323): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(330): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(332): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(341): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(349): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(351): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(352): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(353): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(354): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(359): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(361): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(362): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(364): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(371): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(376): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(378): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(379): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(382): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(384): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(355): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(356): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(358): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(365): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(367): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(369): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(374): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(376): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(377): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(379): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(386): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(391): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(393): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(394): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(404): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(405): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(407): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Random\Dropbox\C++\SomethingToCryAbout\Release\SomethingToCryAbout.exe" /INCREMENTAL:NO /NOLOGO SDL2.lib SDL2_image.lib SDL2_mixer.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Random\Dropbox\C++\SomethingToCryAbout\Release\SomethingToCryAbout.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Random\Dropbox\C++\SomethingToCryAbout\Release\SomethingToCryAbout.lib" /MACHINE:X86 /SAFESEH Release\Bullet.obj
          Release\Button.obj
@@ -104,4 +124,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.99
+Time Elapsed 00:00:01.86

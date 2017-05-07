@@ -67,7 +67,7 @@ public:
 		_y = y;
 	}
 	template <class T>
-	void CWallCollision(const T &other, float x, float y)
+	void CWallCollision(const T &other, float x, float y, int deltaTime)
 	{
 		{
 			bool collideX = (other.rect.x  < rect.x + rect.w && other.rect.x + other.rect.w > rect.x);

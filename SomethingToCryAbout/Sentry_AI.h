@@ -22,7 +22,7 @@ public:
 	~Sentry_AI();
 	void AI_Loop(Player &player, uint32_t deltaTime);
 private:
-	int firingCoolDown = 150;
-	int firingCoolDownMax = 150;
+	int firingCoolDown = 800;
+	int firingCoolDownMax = 800;
 };
 

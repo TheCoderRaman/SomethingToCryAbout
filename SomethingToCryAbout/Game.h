@@ -46,8 +46,10 @@ namespace GameBase{
 			std::vector<Sentry_AI> sentries;
 			std::vector<Sprite> sprites;
 		};
+		Progressor pr(1232313,123213, ACTOR_SIZE, ACTOR_SIZE);
 		bool Pressed = false; // Key Pressed
 		Level test("Assests\\levels\\collide.txt");
+		Level LevelSet[4];
 		namespace Clock
 		{
 			uint32_t last = 0;
@@ -91,8 +93,10 @@ namespace GameBase{
 		bullets.clear();
 		walls.clear();
 		sprites.clear();
+		mWalls.clear();
+		sentries.clear();
+		enemy_bullets.clear();
 		enemies.clear();
-		SDL_Quit();
 	}
 
 	// Will require a PLAYER class in arguments as well cause, input
@@ -155,6 +159,9 @@ namespace GameBase{
 		Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096);
 		step = Mix_LoadWAV("Assests\\sounds\\step.wav");
 		fire = Mix_LoadWAV("Assests\\sounds\\damage_hit.wav");
+		LevelSet[0] = Level("Assests\\levels\\collision.txt");
+		LevelSet[1] = Level("Assests\\levels\\tightSituation.txt");
+		LevelSet[2] = Level("Assests\\levels\\test.txt");
 	}
 
 	/*
@@ -163,6 +170,7 @@ namespace GameBase{
 	*/
 	void RunGame(bool &running, Window* window)
 	{
+		int currentLevel = 1;
 		GameBools::gRunning_ptr = &running;
 		render = SDL_CreateRenderer(window->getWindow(), 0, SDL_RendererFlags::SDL_RENDERER_PRESENTVSYNC || SDL_RendererFlags::SDL_RENDERER_ACCELERATED);
 
@@ -225,7 +233,8 @@ namespace GameBase{
 			else if (!GameBools::MenuActive) {
 				if (LevelLoaded == false)
 				{
-					test.ProcessLevel(player, walls, actors, sprites, enemies, mWalls, sentries,camera.camRect.x, camera.camRect.y);
+					CleanUp();
+					LevelSet[currentLevel-1].ProcessLevel(player, walls, actors, sprites, enemies, mWalls, sentries,pr,camera.camRect.x, camera.camRect.y);
 					LevelLoaded = true;
 					FObj_Setup();
 					HUD_Setup();
@@ -262,11 +271,11 @@ namespace GameBase{
 				{
 					//walls[i].DrawAtOffset(camera.camRect.x, camera.camRect.y, &render);
 					walls[i].Draw(&render, camera.camRect.x, camera.camRect.y);
-					player.CWallCollision<Wall>(walls[i], camera.camRect.x, camera.camRect.y);
+					player.CWallCollision<Wall>(walls[i], camera.camRect.x, camera.camRect.y, Clock::delta);
 					for (int x = 0; x < actors.size(); x++)
-						actors[x].CWallCollision<Wall>(walls[i], camera.camRect.x, camera.camRect.y);
+						actors[x].CWallCollision<Wall>(walls[i], camera.camRect.x, camera.camRect.y,Clock::delta);
 					for (int j = 0; j < mWalls.size(); j++)
-						mWalls[j].CWallCollision<Wall>(walls[i], camera.camRect.x, camera.camRect.y);
+						mWalls[j].CWallCollision<Wall>(walls[i], camera.camRect.x, camera.camRect.y, Clock::delta);
 				}
 				for (int i = 0; i < sprites.size(); i++)
 				{
@@ -303,6 +312,13 @@ namespace GameBase{
 							bullets[i].SetDestroyable(true);
 						}
 					}
+					for (int j = 0; j < sentries.size(); j++)
+					{
+						if (bullets[i].CheckIfTouching<Sentry_AI>(sentries[j])){
+							sentries[j].TakeDamage(20);
+							bullets[i].SetDestroyable(true);
+						}
+					}
 				}
 				for (int i = 0; i < enemy_bullets.size(); i++)
 				{
@@ -313,7 +329,6 @@ namespace GameBase{
 					enemy_bullets[i].action(Clock::delta);
 					enemy_bullets[i].Draw(&render, camera.camRect.x, camera.camRect.y);
 					enemy_bullets[i].CheckIfDestroyable();
-					Mix_PlayChannel(1, fire, 0);
 					for (int j = 0; j < walls.size(); j++)
 						if (enemy_bullets[i].CollisionWall(walls[j]) == true){
 							enemy_bullets[i].SetDestroyable(true); // Let's avoid more crashes.
@@ -334,11 +349,11 @@ namespace GameBase{
 				for (int i = 0; i < mWalls.size(); i++)
 				{
 					mWalls[i].Draw(&render, camera.camRect.x, camera.camRect.y);
-					mWalls[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y);
+					mWalls[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y, Clock::delta);
 					for (int x = 0; x < enemies.size(); x++)
-						mWalls[i].CWallCollision<GenericActor>(enemies[x], camera.camRect.x, camera.camRect.y);
+						mWalls[i].CWallCollision<GenericActor>(enemies[x], camera.camRect.x, camera.camRect.y, Clock::delta);
 					for (int j = 0; j < mWalls.size(); j++)
-						mWalls[i].CWallCollision<MovableWall>(mWalls[j], camera.camRect.x, camera.camRect.y);
+						mWalls[i].CWallCollision<MovableWall>(mWalls[j], camera.camRect.x, camera.camRect.y, Clock::delta);
 				}
 				for (int i = 0; i < enemies.size(); i++)
 				{
@@ -351,35 +366,43 @@ namespace GameBase{
 					enemies[i].AI_Loop(player, Clock::delta);
 					for (int j = 0; j < walls.size(); j++)
 					{
-						enemies[i].CWallCollision<Wall>(walls[j], camera.camRect.x, camera.camRect.y);
+						enemies[i].CWallCollision<Wall>(walls[j], camera.camRect.x, camera.camRect.y, Clock::delta);
 					}
 					if (enemies[i].getSignal() == 1)
 					{
-						if (enemies[i].GetCoolDown() > 1995)
+						if (enemies[i].GetCoolDown() > 744)
 							enemy_bullets.push_back(Bullet(enemies[i]._angle, 45, 0, enemies[i]._x + enemies[i].rect.w / 2, enemies[i]._y + enemies[i].rect.h / 2, 750, render));
 					}
-					enemies[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y);
-					player.CWallCollision<Enemy>(enemies[i], camera.camRect.x, camera.camRect.y);
+					enemies[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y, Clock::delta);
+					player.CWallCollision<Enemy>(enemies[i], camera.camRect.x, camera.camRect.y, Clock::delta);
 				}
 				for (int i = 0; i < sentries.size(); i++)
 				{
 					if (sentries[i].isDead() == true)
 					{
 						enemy_bullets.clear(); // To avoid weird magic bullets
-						enemies.erase(enemies.begin() + i);
+						sentries.erase(sentries.begin() + i);
 					}
 					sentries[i].Draw(&render, camera.camRect.x, camera.camRect.y);
 					sentries[i].AI_Loop(player, Clock::delta);
 					if (sentries[i].getSignal() == 1)
 					{
-						if (sentries[i].GetCoolDown() > 150)
+						if (sentries[i].GetCoolDown() > 748)
 							enemy_bullets.push_back(Bullet(sentries[i]._angle, 45, 0, sentries[i]._x + sentries[i].rect.w / 2, sentries[i]._y + sentries[i].rect.h / 2, 750, render));
 					}
-					sentries[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y);
-					player.CWallCollision<Sentry_AI>(sentries[i], camera.camRect.x, camera.camRect.y);
+					sentries[i].CWallCollision<Player>(player, camera.camRect.x, camera.camRect.y, Clock::delta);
+					player.CWallCollision<Sentry_AI>(sentries[i], camera.camRect.x, camera.camRect.y, Clock::delta);
+				}
+				if (player.CheckIfTouching<Progressor>(pr))
+				{
+					currentLevel++;
+					LevelLoaded = false;
+					pr.SetPos(124245, 124214);
 				}
 				//	player.DrawAtOffset(camera.camRect.x, camera.camRect.y, &render);
+				
 				player.Draw(&render, camera.camRect.x, camera.camRect.y);
+				pr.DrawRect(camera.camRect.x, camera.camRect.y, 0, sin(SDL_GetTicks()/2+50), 0, &render);
 				health_bar.Draw((int)0, (int)450, &render);
 				health_meter.SetRectWidth(player._health * 2);
 				health_meter.DrawRect(0, 445, 255, 0, 0, & render);
@@ -394,6 +417,7 @@ namespace GameBase{
 				youdied.LoadTexture("Assests\\youdied.png", *render);
 				youdied.FlatDraw(&render, 0, 0);
 				SDL_RenderPresent(render);
+				SDL_Quit();
 				SDL_Delay(2000);
 				return;
 			}

@@ -42,7 +42,7 @@ protected:
 	bool aggro;
 	bool dead;
 	int s;
-    int firingCoolDown = 350;
-	int firingCoolDownMax = 350;
+    int firingCoolDown = 750;
+	int firingCoolDownMax = 750;
 };
 
