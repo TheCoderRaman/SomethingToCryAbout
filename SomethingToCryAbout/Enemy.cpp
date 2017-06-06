@@ -67,7 +67,7 @@ void Enemy::AI_Loop(Player &player, uint32_t deltaTime)
 		// Generic State
 	//	std::printf("This Enemy is not angry.\n");
 		srand(time(0) * id - 250 + id);
-		int moveX = rand() % 2 + 1;
+		int moveX = rand() % 2 + 2;
 		int moveY = rand() % 2 + 1;
 		if (moveX == 1){
 			_x -= _vX/3*deltaTime/2;

@@ -1,7 +1,161 @@
-﻿Build started 6/5/2017 10:42:51 PM.
+﻿Build started 6/5/2017 10:49:23 PM.
      1>Project "C:\Users\Random\Dropbox\C++\SomethingToCryAbout\SomethingToCryAbout\SomethingToCryAbout.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bullet.cpp Button.cpp Enemy.cpp GenericActor.cpp Level.cpp main.cpp Medkit.cpp MovableWall.cpp Player.cpp Sentry_AI.cpp Sprite.cpp stdafx.cpp Texture.cpp Wall.cpp Window.cpp
+         Bullet.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(14): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Bullet.cpp(8): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Bullet.cpp(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Bullet.cpp(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Bullet.cpp(11): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Bullet.cpp(12): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Bullet.cpp(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Bullet.cpp(32): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Button.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>Button.cpp(6): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Button.cpp(7): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Button.cpp(8): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Button.cpp(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Button.cpp(10): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Button.cpp(11): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Button.cpp(12): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Button.cpp(13): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Button.cpp(32): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Button.cpp(33): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Button.cpp(34): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Button.cpp(35): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Enemy.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(14): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Enemy.cpp(69): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>Enemy.cpp(98): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Enemy.cpp(99): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         GenericActor.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>GenericActor.cpp(15): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Level.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(14): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(13): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(14): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(15): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(22): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(23): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(24): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(25): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(32): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(33): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(13): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(14): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(15): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(22): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(23): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(24): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(25): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(32): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Progressor.h(33): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>Level.cpp(20): warning C4018: '<' : signed/unsigned mismatch
+     1>Level.cpp(22): warning C4018: '<' : signed/unsigned mismatch
          main.cpp
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
@@ -123,6 +277,122 @@
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(492): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(493): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Game.h(495): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Medkit.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(9): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(13): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(14): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(15): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(22): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(23): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(24): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(25): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(32): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Medkit.h(33): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+         MovableWall.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>MovableWall.cpp(6): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>MovableWall.cpp(7): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>MovableWall.cpp(10): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>MovableWall.cpp(11): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Player.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>Player.cpp(5): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Player.cpp(6): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Sentry_AI.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(14): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(15): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(45): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(46): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(66): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Player.h(67): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\GenericActor.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(14): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Enemy.h(20): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(17): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sentry_AI.h(18): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Sprite.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>Sprite.cpp(22): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(23): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(28): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(29): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(30): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(31): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(32): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(33): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(34): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(35): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(41): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(42): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(43): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(44): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Sprite.cpp(45): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(46): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(47): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(48): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(71): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Sprite.cpp(72): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         stdafx.cpp
+         Texture.cpp
+         Wall.cpp
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\Sprite.h(29): warning C4244: 'argument' : conversion from 'float' to 'Uint8', possible loss of data
+     1>Wall.cpp(15): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Wall.cpp(16): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Window.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Random\Dropbox\C++\SomethingToCryAbout\Release\SomethingToCryAbout.exe" /INCREMENTAL:NO /NOLOGO SDL2.lib SDL2_image.lib SDL2_mixer.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Random\Dropbox\C++\SomethingToCryAbout\Release\SomethingToCryAbout.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Random\Dropbox\C++\SomethingToCryAbout\Release\SomethingToCryAbout.lib" /MACHINE:X86 /SAFESEH Release\Bullet.obj
          Release\Button.obj
@@ -147,4 +417,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.75
+Time Elapsed 00:00:04.57
