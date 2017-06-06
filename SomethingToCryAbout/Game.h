@@ -13,7 +13,7 @@
 #include "MovableWall.h"
 #include "CameraStruct.h"
 #include "Sentry_AI.h"
-#include <SDL_mixer.h>
+#include <SDL2/SDL_mixer.h>
 // Global Variables
 // Like Buttons etc.
 /*
@@ -26,8 +26,8 @@ namespace GameBase{
 			bool *gRunning_ptr = nullptr;
 			bool MenuActive = true;
 		};
-		const int w = 800;
-		const int h = 600;
+		int w = 800;
+		int h = 600;
 		const int lW = 15000;
 		const int lH = 15000;
 		Mix_Chunk* step, *fire;
@@ -45,11 +45,11 @@ namespace GameBase{
 			std::vector<Enemy> enemies;
 			std::vector<Sentry_AI> sentries;
 			std::vector<Sprite> sprites;
+			std::vector<Medkit> kits;
 		};
 		Progressor pr(1232313,123213, ACTOR_SIZE, ACTOR_SIZE);
 		bool Pressed = false; // Key Pressed
-		Level test("Assests\\levels\\collide.txt");
-		Level LevelSet[4];
+		Level LevelSet[7];
 		namespace Clock
 		{
 			uint32_t last = 0;
@@ -97,6 +97,7 @@ namespace GameBase{
 		sentries.clear();
 		enemy_bullets.clear();
 		enemies.clear();
+		kits.clear();
 	}
 
 	// Will require a PLAYER class in arguments as well cause, input
@@ -159,9 +160,9 @@ namespace GameBase{
 		Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096);
 		step = Mix_LoadWAV("Assests\\sounds\\step.wav");
 		fire = Mix_LoadWAV("Assests\\sounds\\damage_hit.wav");
-		LevelSet[0] = Level("Assests\\levels\\collision.txt");
-		LevelSet[1] = Level("Assests\\levels\\tightSituation.txt");
-		LevelSet[2] = Level("Assests\\levels\\test.txt");
+		for (int i = 1; i < 6; i++){
+			LevelSet[i-1] = Level("Assests\\levels\\" + std::to_string(i) + ".txt");
+		}
 	}
 
 	/*
@@ -173,9 +174,13 @@ namespace GameBase{
 		int currentLevel = 1;
 		GameBools::gRunning_ptr = &running;
 		render = SDL_CreateRenderer(window->getWindow(), 0, SDL_RendererFlags::SDL_RENDERER_PRESENTVSYNC || SDL_RendererFlags::SDL_RENDERER_ACCELERATED);
+		w = window->getWidth();
+		h = window->getHeight();
 
 		camera.camRect.w = w;
 		camera.camRect.h = h;
+	
+		
 		auto FObj_Setup = [&]() {
 			// UI ELEMENTS
 			Sprite banner(w / 2, h - 300, 200, 100, TYPE_UI_BANNER);
@@ -194,25 +199,29 @@ namespace GameBase{
 					sprites[i].LoadTexture("Assests\\grass.png", *render);
 				if (sprites[i].TYPE == TYPE_METAL)
 					sprites[i].LoadTexture("Assests\\metal_floor.png", *render);
+				if (sprites[i].TYPE == TYPE_MEDKIT)
+					sprites[i].LoadTexture("Assests\\mk.png", *render);
 			}
 			for (int i = 0; i < mWalls.size(); i++)
-			{
 				mWalls[i].LoadTexture("Assests\\box.png", *render);
-			}
 			for (int i = 0; i < enemies.size(); i++)
 				enemies[i].LoadTexture("Assests\\enemy.png", *render);
 			for (int i = 0; i < sentries.size(); i++)
 				sentries[i].LoadTexture("Assests\\turret.png", *render);
+			for (int i = 0; i < kits.size(); i++)
+				kits[i].LoadTexture("Assests\\mk.png", *render);
 			player.LoadTexture("Assests\\player.png", *render);
 			std::printf("Walls : %d", walls.size());
 		};
 		auto HUD_Setup = [&](){
 			health_bar.LoadTexture("Assests\\hpBar.png", *render);
 		};
-		Button start(w / 2, h / 2, 300, 150, BUTTON_START);
-		Button quit(w / 2, h / 2, 300, 150, BUTTON_QUIT);
+		Button start(w / 2, h / 2 + 500, 300, 150, BUTTON_START);
+		Button quit(w / 2, h / 2 + 500, 300, 150, BUTTON_QUIT);
 		start.LoadTexture("Assests\\start.png", *render);
 		quit.LoadTexture("Assests\\quit.png", *render);
+		Sprite mainMenu(0, 0, w, h);
+		mainMenu.LoadTexture("Assests\\menu.png", *render);
 		bool LevelLoaded = false;
 		while (*GameBools::gRunning_ptr)
 		{
@@ -224,8 +233,9 @@ namespace GameBase{
 			ProcessInput(window, *GameBools::gRunning_ptr, &player);
 			if (GameBools::MenuActive)
 			{
-				start.Draw(w / 2 - 230, h / 2 - 200, &render);
-				quit.Draw(w / 2 - 230,  h / 2 + 140, &render);
+				mainMenu.Draw(0, 0, &render);
+				start.Draw(w / 2 - 230, h / 2 + 100, &render);
+				quit.Draw(w / 2 - 230,  h / 2 + 350, &render);
 				start.IsClickedOn(ButtonCallback::CallBack_Handler, e);
 				quit.IsClickedOn(ButtonCallback::CallBack_Handler, e);
 				SDL_RenderPresent(render);
@@ -234,7 +244,7 @@ namespace GameBase{
 				if (LevelLoaded == false)
 				{
 					CleanUp();
-					LevelSet[currentLevel-1].ProcessLevel(player, walls, actors, sprites, enemies, mWalls, sentries,pr,camera.camRect.x, camera.camRect.y);
+					LevelSet[currentLevel-1].ProcessLevel(player, walls, actors, sprites, enemies, mWalls, sentries,pr, kits,camera.camRect.x, camera.camRect.y);
 					LevelLoaded = true;
 					FObj_Setup();
 					HUD_Setup();
@@ -266,6 +276,13 @@ namespace GameBase{
 				for (int i = 0; i < enemy_bullets.size(); i++){
 					if (enemy_bullets[i].TextureIsLoaded() == false)
 						enemy_bullets[i].LoadTexture("Assests\\bullet.png", *render);
+				}
+				for (int i = 0; i < kits.size(); i++){
+					kits[i].Draw(camera.camRect.x, camera.camRect.y, &render);
+					if (player.CheckIfTouching<Medkit>(kits[i])){
+						player._health += 40;
+						kits.erase(kits.begin() + i);
+					}
 				}
 				for (int i = 0; i < walls.size(); i++)
 				{

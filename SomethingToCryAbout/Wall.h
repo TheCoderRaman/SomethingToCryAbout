@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <string>
 #include "Sprite.h"
 // Pretty much a glorified sprite at this point.

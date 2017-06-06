@@ -9,6 +9,8 @@ public:
 	SDL_Window *getWindow(); // for rendering purposes
 	bool CreateWindow();
 	void CleanUp(); // Destructor function
+	int getWidth() { return m_width; }
+	int getHeight() { return m_height; }
 private:
 	SDL_Window* m_window = NULL;
 	int m_width;

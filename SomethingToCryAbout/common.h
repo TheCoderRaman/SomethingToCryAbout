@@ -1,15 +1,15 @@
 // Use include macros for slightly less problems
 #ifndef COMMON_HEADER
 #define COMMON_HEADER
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #ifndef _SDL_MIX
-#include <SDL_mixer.h>
+#include <SDL2/SDL_mixer.h>
 #endif
 #ifndef _SDL_IMG
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 #endif
 #ifndef _SDL_TTF
-#include <SDL_ttf.h>
+#include <SDL2/SDL_ttf.h>
 #endif
 #ifndef EVERYTHING
 #define _SDL_MIX
@@ -21,6 +21,7 @@
 #define TYPE_WOOD 0
 #define TYPE_GRASS 1
 #define TYPE_METAL 2
+#define TYPE_MEDKIT 3
 // OTHER SPRITE TYPES
 #define TYPE_UI_BANNER 40
 #define TYPE_UI_MENU 2000

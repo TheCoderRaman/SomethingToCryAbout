@@ -92,6 +92,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GenericActor.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="Medkit.h" />
     <ClInclude Include="MovableWall.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Progressor.h" />
@@ -110,6 +111,7 @@
     <ClCompile Include="GenericActor.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Medkit.cpp" />
     <ClCompile Include="MovableWall.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sentry_AI.cpp" />

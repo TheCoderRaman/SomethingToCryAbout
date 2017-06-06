@@ -15,7 +15,7 @@ Level::Level(std::string path)
 	level.close();
 }
 
-void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<GenericActor>&actors, std::vector<Sprite> &sprites, std::vector<Enemy> &enemies, std::vector<MovableWall> &mWalls, std::vector<Sentry_AI> &sentries, Progressor &pr, int spawnOffsetX, int spawnOffsetY)
+void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<GenericActor>&actors, std::vector<Sprite> &sprites, std::vector<Enemy> &enemies, std::vector<MovableWall> &mWalls, std::vector<Sentry_AI> &sentries, Progressor &pr, std::vector<Medkit>&kits, int spawnOffsetX, int spawnOffsetY)
 {
 	for (int i = 0; i < levelData.size(); i++)
 	{
@@ -88,6 +88,11 @@ void Level::ProcessLevel(Player &player, std::vector<Wall> &walls, std::vector<G
 			if (levelData[i][j] == '%')
 			{
 				pr.SetPos(j * ACTOR_SIZE, i * ACTOR_SIZE);
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_METAL));
+			}
+			if (levelData[i][j] == 'h'){
+				kits.push_back(Medkit(j *BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE));
+				sprites.push_back(Sprite(j*BLOCK_SIZE, i*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE, TYPE_MEDKIT));
 			}
 		}
 	}

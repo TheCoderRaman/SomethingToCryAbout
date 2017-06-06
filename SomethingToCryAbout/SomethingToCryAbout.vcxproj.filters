@@ -81,6 +81,9 @@
     <ClInclude Include="Progressor.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="Medkit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -123,6 +126,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sentry_AI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Medkit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
