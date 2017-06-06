@@ -76,8 +76,8 @@ namespace GameBase{
 		*/
 		
 		namespace CallBackTypes{
-			void CallBack_Quit() { *GameBools::gRunning_ptr = false; }
-			void CallBack_Start(){ GameBools::MenuActive = false;  Quit(); }
+			void CallBack_Quit() { *GameBools::gRunning_ptr = false; Quit(); }
+			void CallBack_Start(){ GameBools::MenuActive = false; }
 		};
 		void CallBack_Handler(int type)
 		{
