@@ -515,5 +515,7 @@ namespace GameBase{
 		SDL_GameControllerClose(controller);
 		SDL_Quit();
 		SDL_Delay(2000);
+		exit(0);
+		return;
 	}
 };
