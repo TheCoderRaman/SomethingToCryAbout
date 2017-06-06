@@ -25,12 +25,15 @@ namespace GameBase{
 		namespace GameBools{
 			bool *gRunning_ptr = nullptr;
 			bool MenuActive = true;
+			bool ControllerMSG = false;
 		};
 		int w = 800;
 		int h = 600;
 		const int lW = 15000;
 		const int lH = 15000;
 		Mix_Chunk* step, *fire;
+		SDL_Joystick *joyStick;
+		SDL_GameController *controller;
 		SDL_Event e; // For General Events
 		SDL_Renderer* render; // GLOBAL RENDERER
 		Player player(0, 0, 50, 50);
@@ -89,6 +92,9 @@ namespace GameBase{
 	// END OF GLOBAL VARIABLES
 	void CleanUp()
 	{
+		/*
+			Clear all the memory only to reuse it in a few minutes
+		*/
 		actors.clear();
 		bullets.clear();
 		walls.clear();
@@ -104,6 +110,15 @@ namespace GameBase{
 	void ProcessInput(Window* window, bool &running, Player* player)
 	{
 		const Uint8 *state = SDL_GetKeyboardState(NULL);
+		if (SDL_NumJoysticks() == 1){
+			
+			if (!GlobalVariables::GameBools::ControllerMSG)
+			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, "Controller Detected. We support them", "Controller Support", window->getWindow());
+			
+			GlobalVariables::GameBools::ControllerMSG = true;
+			joyStick = SDL_JoystickOpen(0);
+			controller = SDL_GameControllerOpen(0);
+		}
 		while (SDL_PollEvent(&e))
 		{
 			if (e.type == SDL_QUIT)
@@ -113,12 +128,17 @@ namespace GameBase{
 				running = false;
 			}
 			if (e.type == SDL_KEYDOWN){
-				if (e.key.keysym.sym == SDLK_SPACE)
-				{
-					if (!Pressed){
-						bullets.push_back(Bullet(player->_angle, 30, 0, player->_x + player->rect.w / 2, player->_y + player->rect.h / 2, 750, render));
-						Pressed = true;
-						Mix_PlayChannel(-1, fire, 0);
+				if (GlobalVariables::GameBools::MenuActive == false){
+					if (e.key.keysym.sym == SDLK_SPACE)
+					{
+						if (!Pressed){
+							bullets.push_back(Bullet(player->_angle, 30, 0, player->_x + player->rect.w / 2, player->_y + player->rect.h / 2, 750, render));
+							Pressed = true;
+							Mix_PlayChannel(-1, fire, 0);
+						}
+					}
+					if (e.key.keysym.sym == SDLK_ESCAPE){
+						GlobalVariables::GameBools::MenuActive = true;
 					}
 				}
 			}
@@ -126,40 +146,89 @@ namespace GameBase{
 			{
 				Pressed = false;
 			}
+			if (GlobalVariables::GameBools::MenuActive == false){
+				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_START){
+					GlobalVariables::GameBools::MenuActive = true;
+				}
+				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_RIGHT){
+					player->_x += (player->_vX * 10) * Clock::delta;
+					player->_angle = DIR_RIGHT;
+					Mix_PlayChannel(0, step, 0);
+				}
+				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_LEFT){
+					player->_x -= (player->_vX * 10) * Clock::delta;
+					player->_angle = DIR_LEFT;
+					Mix_PlayChannel(0, step, 0);
+				}
+				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_UP){
+					player->_y -= (player->_vY * 10) * Clock::delta;
+					player->_angle = DIR_UP;
+					Mix_PlayChannel(0, step, 0);
+				}
+				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_DOWN){
+					player->_y += (player->_vY * 10) * Clock::delta;
+					player->_angle = DIR_DOWN;
+					Mix_PlayChannel(0, step, 0);
+				}
+				if (e.type == SDL_CONTROLLERBUTTONDOWN){
+					if (e.cbutton.button == SDL_CONTROLLER_BUTTON_A){
+						if (!Pressed){
+							bullets.push_back(Bullet(player->_angle, 30, 0, player->_x + player->rect.w / 2, player->_y + player->rect.h / 2, 750, render));
+							Pressed = true;
+							Mix_PlayChannel(-1, fire, 0);
+						}
+					}
+				}
+				if (e.type == SDL_CONTROLLERBUTTONUP){
+					Pressed = false;
+				}
+			}
 		}
-		if (state[SDL_SCANCODE_W])
-		{
-			player->_y -= player->_vY * Clock::delta;
-			player->_angle = DIR_UP;
-			Mix_PlayChannel(0, step, 0);
+		if (GlobalVariables::GameBools::MenuActive == false){
+			if (state[SDL_SCANCODE_W])
+			{
+				player->_y -= player->_vY * Clock::delta;
+				player->_angle = DIR_UP;
+				Mix_PlayChannel(0, step, 0);
+			}
+			if (state[SDL_SCANCODE_S])
+			{
+				player->_y += player->_vY * Clock::delta;
+				player->_angle = DIR_DOWN;
+				Mix_PlayChannel(0, step, 0);
+			}
+			if (state[SDL_SCANCODE_D])
+			{
+				player->_x += player->_vX * Clock::delta;
+				player->_angle = DIR_RIGHT;
+				Mix_PlayChannel(0, step, 0);
+			}
+			if (state[SDL_SCANCODE_A])
+			{
+				player->_x -= player->_vX * Clock::delta;
+				player->_angle = DIR_LEFT;
+				Mix_PlayChannel(0, step, 0);
+			}
 		}
-		if (state[SDL_SCANCODE_S])
-		{
-			player->_y += player->_vY * Clock::delta;
-			player->_angle = DIR_DOWN;
-			Mix_PlayChannel(0, step, 0);
 		}
-		if (state[SDL_SCANCODE_D])
-		{
-			player->_x += player->_vX * Clock::delta;
-			player->_angle = DIR_RIGHT;
-			Mix_PlayChannel(0, step, 0);
-		}
-		if (state[SDL_SCANCODE_A])
-		{
-			player->_x -= player->_vX * Clock::delta;
-			player->_angle = DIR_LEFT;
-			Mix_PlayChannel(0, step, 0);
-		}
-	}
 	void Init()
 	{
+		/*
+		Using everything SDL has to offer.
+		*/
 		SDL_Init(SDL_INIT_EVERYTHING);
 		IMG_Init(IMG_INIT_PNG);
 		Mix_Init(MIX_INIT_MP3);
 		Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096);
+		/*
+			Load sounds before hand so I can reuse them and not use much more memory.
+		*/
 		step = Mix_LoadWAV("Assests\\sounds\\step.wav");
 		fire = Mix_LoadWAV("Assests\\sounds\\damage_hit.wav");
+		/*
+			all my levels are just numbered accordingly.
+			It just makes sense to for loop through all of them
+		*/
 		for (int i = 1; i < 6; i++){
 			LevelSet[i-1] = Level("Assests\\levels\\" + std::to_string(i) + ".txt");
 		}
@@ -434,6 +503,8 @@ namespace GameBase{
 				youdied.LoadTexture("Assests\\youdied.png", *render);
 				youdied.FlatDraw(&render, 0, 0);
 				SDL_RenderPresent(render);
+				SDL_JoystickClose(joyStick);
+				SDL_GameControllerClose(controller);
 				SDL_Quit();
 				SDL_Delay(2000);
 				return;
