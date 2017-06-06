@@ -16,5 +16,6 @@ int main(int argc, char* argv[])
 	Window window(SDL_WINDOW_SHOWN | flag, w, h, "Revision 2 : The Refactoring");
 	window.CreateWindow();
 	GameBase::RunGame(fl, &window);
+	GameBase::Quit();
 	return 0;
 }

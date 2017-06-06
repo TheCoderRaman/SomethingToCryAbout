@@ -50,6 +50,7 @@ namespace GameBase{
 			std::vector<Sprite> sprites;
 			std::vector<Medkit> kits;
 		};
+		
 		Progressor pr(1232313,123213, ACTOR_SIZE, ACTOR_SIZE);
 		bool Pressed = false; // Key Pressed
 		Level LevelSet[7];
@@ -68,14 +69,15 @@ namespace GameBase{
 
 	using namespace GlobalVariables;
 	using namespace GlobalVariables::Vectors;
-
+	void Quit(); // Prototype
 	namespace ButtonCallback{
 		/*
 		A Callback handler that calls callbacks. BEATUFIUL
 		*/
+		
 		namespace CallBackTypes{
 			void CallBack_Quit() { *GameBools::gRunning_ptr = false; }
-			void CallBack_Start(){ GameBools::MenuActive = false; }
+			void CallBack_Start(){ GameBools::MenuActive = false;  Quit(); }
 		};
 		void CallBack_Handler(int type)
 		{
@@ -151,22 +153,22 @@ namespace GameBase{
 					GlobalVariables::GameBools::MenuActive = true;
 				}
 				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_RIGHT){
-					player->_x += (player->_vX * 10) * Clock::delta;
+					player->_x += (player->_vX * 15) * Clock::delta;
 					player->_angle = DIR_RIGHT;
 					Mix_PlayChannel(0, step, 0);
 				}
 				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_LEFT){
-					player->_x -= (player->_vX * 10) * Clock::delta;
+					player->_x -= (player->_vX * 15) * Clock::delta;
 					player->_angle = DIR_LEFT;
 					Mix_PlayChannel(0, step, 0);
 				}
 				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_UP){
-					player->_y -= (player->_vY * 10) * Clock::delta;
+					player->_y -= (player->_vY * 15) * Clock::delta;
 					player->_angle = DIR_UP;
 					Mix_PlayChannel(0, step, 0);
 				}
 				if (e.cbutton.button == SDL_CONTROLLER_BUTTON_DPAD_DOWN){
-					player->_y += (player->_vY * 10) * Clock::delta;
+					player->_y += (player->_vY * 15) * Clock::delta;
 					player->_angle = DIR_DOWN;
 					Mix_PlayChannel(0, step, 0);
 				}
@@ -503,12 +505,15 @@ namespace GameBase{
 				youdied.LoadTexture("Assests\\youdied.png", *render);
 				youdied.FlatDraw(&render, 0, 0);
 				SDL_RenderPresent(render);
-				SDL_JoystickClose(joyStick);
-				SDL_GameControllerClose(controller);
-				SDL_Quit();
-				SDL_Delay(2000);
-				return;
+				player._health = 100; // Invalidate the death check so next time I don't get an infinite loop.
+				GameBools::MenuActive = true;
 			}
 		}
+	}
+	void Quit(){
+		SDL_JoystickClose(joyStick);
+		SDL_GameControllerClose(controller);
+		SDL_Quit();
+		SDL_Delay(2000);
 	}
 };
