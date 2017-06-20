@@ -55,7 +55,7 @@
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -72,7 +72,7 @@
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
@@ -96,6 +96,7 @@
     <ClInclude Include="MovableWall.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Progressor.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Sentry_AI.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="stdafx.h" />
@@ -120,6 +121,12 @@
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SomethingToCryAbout.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

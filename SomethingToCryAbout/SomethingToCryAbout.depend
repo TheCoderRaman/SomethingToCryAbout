@@ -1,0 +1,150 @@
+# depslib dependency file v1.0
+1493411610 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\bullet.cpp
+	"Bullet.h"
+	<chrono>
+	"Enemy.h"
+
+1494645891 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\bullet.h
+	"Sprite.h"
+	"Wall.h"
+	"Player.h"
+
+1494187993 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\sprite.h
+	"Texture.h"
+
+1494171070 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\texture.h
+	"common.h"
+
+1496701807 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\common.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+
+1495674759 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\wall.h
+	<SDL2/SDL.h>
+	<string>
+	"Sprite.h"
+
+1496697414 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\player.h
+	"Sprite.h"
+	<stdio.h>
+	"Wall.h"
+
+1494185581 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\enemy.h
+	"common.h"
+	"GenericActor.h"
+	<vector>
+	"Bullet.h"
+
+1494121940 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\genericactor.h
+	"Player.h"
+	<time.h>
+
+1494169722 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\button.cpp
+	"Button.h"
+	<cstdio>
+
+1494169742 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\button.h
+	"Sprite.h"
+	<functional>
+
+1496717215 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\enemy.cpp
+	"Enemy.h"
+
+1494122112 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\genericactor.cpp
+	"GenericActor.h"
+
+1496701816 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\level.cpp
+	"Level.h"
+	"common.h"
+
+1496700994 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\level.h
+	"Player.h"
+	"Wall.h"
+	"Enemy.h"
+	"Sentry_AI.h"
+	"Medkit.h"
+	<fstream>
+	<vector>
+	"Progressor.h"
+	"GenericActor.h"
+	"MovableWall.h"
+
+1494645891 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\sentry_ai.h
+	"Enemy.h"
+
+1496700879 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\medkit.h
+	"Sprite.h"
+
+1494188061 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\progressor.h
+	"Sprite.h"
+
+1493414546 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\movablewall.h
+	"Player.h"
+
+1496716340 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\main.cpp
+	"stdafx.h"
+	"ConfigReader.h"
+	"Window.h"
+	"Game.h"
+
+1491948246 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\stdafx.h
+	"targetver.h"
+	<stdio.h>
+
+1496975086 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\targetver.h
+
+1494183376 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\configreader.h
+	<fstream>
+	<iostream>
+	<string>
+
+1496702430 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\window.h
+	"common.h"
+
+1496716971 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\game.h
+	"common.h"
+	"stdafx.h"
+	"Window.h"
+	<vector>
+	"Level.h"
+	<algorithm>
+	"GenericActor.h"
+	"Button.h"
+	"Enemy.h"
+	"Bullet.h"
+	"MovableWall.h"
+	"CameraStruct.h"
+	"Sentry_AI.h"
+	<SDL2/SDL_mixer.h>
+
+1493496657 c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\camerastruct.h
+
+1496700862 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\medkit.cpp
+	"Medkit.h"
+
+1493414949 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\movablewall.cpp
+	"MovableWall.h"
+
+1493410501 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\player.cpp
+	"Player.h"
+
+1494184964 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\sentry_ai.cpp
+	"Sentry_AI.h"
+
+1494169905 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\sprite.cpp
+	"Sprite.h"
+
+1491948227 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\stdafx.cpp
+	"stdafx.h"
+
+1493322153 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\texture.cpp
+	"Texture.h"
+
+1493410640 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\wall.cpp
+	"Wall.h"
+
+1493334409 source:c:\users\random\dropbox\c++\somethingtocryabout\somethingtocryabout\window.cpp
+	"Window.h"
+

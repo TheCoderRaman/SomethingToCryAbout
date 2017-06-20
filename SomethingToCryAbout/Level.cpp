@@ -3,7 +3,7 @@
 #include "common.h"
 Level::Level(std::string path)
 {
-	std::ifstream level(path);
+	std::ifstream level(path.c_str());
 	if (level.good())
 	{
 		std::string temp;
