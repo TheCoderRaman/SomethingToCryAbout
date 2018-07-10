@@ -1,0 +1,14 @@
+Very very ambitious...
+
+This was my second game project after taking C++ seriously.
+Darn this was a long time ago and that really shows...
+
+Other than the fact it looks like an ancient flash game ( and sort of plays like one )
+This is maybe the worst C++ code I will ever write ( well SDL Pong comes to mind but that actually plays fine and correctly so I'll let it slide because it works the right way )
+
+Problems:
+  - I didn't discover delta time so framerate issues can actually break the game
+  - Framerate issues everywhere. I did not optimize the collision AI or rendering which makes this 2D game run like s**t in "intense" situations.
+  - The same problems that plagued my other earlier ventures into game programming
+  
+While I plan to remake these two memories of mine. That won't come for a long time.
